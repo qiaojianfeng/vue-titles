@@ -1,5 +1,5 @@
 {
-  "name": "vue-title",
+  "name": "vue-titles",
   "version": "1.0.0",
   "description": "A Vue based Title plug-in",
   "main": "index.js",
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webweifeng/vue-title.git"
+    "url": "git+https://github.com/webweifeng/vue-titles.git"
   },
   "keywords": ["vue", "title"],
   "author": "qiaojianfeng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webweifeng/vue-title/issues"
+    "url": "https://github.com/webweifeng/vue-titles/issues"
   },
-  "homepage": "https://github.com/webweifeng/vue-title#readme"
+  "homepage": "https://github.com/webweifeng/vue-titles#readme"
 }
