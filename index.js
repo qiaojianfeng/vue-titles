@@ -2,7 +2,7 @@
  * @Author: qiaojianfeng 
  * @Date: 2018-05-12 12:40:06 
  * @Last Modified by: qiaojianfeng
- * @Last Modified time: 2018-05-12 14:48:02
+ * @Last Modified time: 2018-05-12 15:37:59
  * 参考自 v-wechat-title 去掉favicon，对于qun项目感觉有些鸡肋还是单纯些好😄
  */
 
@@ -12,7 +12,7 @@
       if (title === undefined || window.document.title === title) {
         return;
       }
-      document.title = title;
+      window.document.title = title;
       var ua = navigator.userAgent.toLowerCase();
       if (/iphone|ipad|ipod/.test(ua)) {
         var iframe = document.createElement('iframe');
@@ -40,4 +40,4 @@
   } else if (window.Vue) {
     Vue.use(install);
   }
-})();
+})(window);
