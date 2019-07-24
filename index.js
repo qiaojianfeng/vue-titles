@@ -1,17 +1,14 @@
 /*
- * @Author: qiaojianfeng 
- * @Date: 2018-05-12 12:40:06 
+ * @Author: qiaojianfeng
+ * @Date: 2018-05-12 12:40:06
  * @Last Modified by: qiaojianfeng
- * @Last Modified time: 2018-05-12 15:37:59
- * 参考自 v-wechat-title 去掉favicon，对于qun项目感觉有些鸡肋还是单纯些好😄
+ * @Last Modified time: 2019-07-24 16:16:47
  */
 
 (function(window) {
   function install(Vue) {
-    var setTitle = function(title) {
-      if (title === undefined || window.document.title === title) {
-        return;
-      }
+    var setMyTitle = function(title) {
+      if (title === void 0 || window.document.title === title) return;
       window.document.title = title;
       var ua = navigator.userAgent.toLowerCase();
       if (/iphone|ipad|ipod/.test(ua)) {
@@ -28,8 +25,11 @@
       }
     };
     Vue.directive('title', function(el, binding) {
-      setTitle(binding.value);
+      setMyTitle(binding.value);
     });
+    Vue.prototype.$setTitle = function(title) {
+      setMyTitle(title);
+    };
   }
   if (typeof module !== 'undefined' && typeof exports === 'object') {
     module.exports = install;
