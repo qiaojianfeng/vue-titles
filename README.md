@@ -19,6 +19,8 @@ npm install vue-titles --save
 Vue.use(require('vue-titles'));
 ```
 
+## 使用场景 1 ：单页面应用切换路由跳转更新 title
+
 > 路由定义(只截取一部分)
 
 ```js
@@ -44,8 +46,6 @@ const routes = [
 // ...
 ```
 
-## 使用场景 1 ：单页面应用切换路由跳转更新 title
-
 > App.vue **建议全局只使用一次该指令 标题可用 vuex 或者 router 中定义 不要多处使用!!**
 
 ```html
@@ -58,5 +58,6 @@ const routes = [
 ## 使用场景 2：同一个路由不同状态需要手动设置 title
 
 ```js
+// 需要的地方直接调用
 this.$setTitle('厉害了我的哥！');
 ```
